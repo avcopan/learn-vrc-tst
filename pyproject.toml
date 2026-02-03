@@ -50,6 +50,6 @@ root_package = "learn_vrc_tst"
 name = "Module Layering"
 type = "layers"
 layers = [
-    "learn_vrc_tst.layer2",
-    "learn_vrc_tst.layer1",
+    "learn_vrc_tst.view",
+    "learn_vrc_tst.geom",
 ]
