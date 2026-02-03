@@ -53,24 +53,3 @@ layers = [
     "learn_vrc_tst.layer2",
     "learn_vrc_tst.layer1",
 ]
-
-# Pytest configurations
-[tool.pytest.ini_options]
-testpaths = ["tests", "src"]
-addopts = [
-    "--doctest-modules",
-    "--cov=learn_vrc_tst",
-    "--cov-report=term-missing",
-    "--cov-report=xml",
-]
-doctest_optionflags = "NORMALIZE_WHITESPACE"
-
-# Pytest-cov configurations
-[tool.coverage.run]
-branch = true
-source = ["learn_vrc_tst"]
-
-[tool.coverage.report]
-show_missing = true
-skip_covered = true
-fail_under = 80

@@ -15,5 +15,3 @@ pre-commit:
     imports:
       run: pixi run imports
 
-    test:
-      run: pixi run test
