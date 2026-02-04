@@ -3,24 +3,44 @@
 import numpy as np
 from automol import Geometry
 from numpy.typing import ArrayLike
+from scipy.spatial.transform import Rotation
 
 
 def translate(geo: Geometry, arr: ArrayLike, *, in_place: bool = False) -> Geometry:
-    """Translate a geometry by a given vector.
+    """Translate geometry.
 
     Parameters
     ----------
     geo
-        Molecular geometry.
+        Geometry.
     arr
         Translation vector or matrix.
 
     Returns
     -------
-        Molecular geometry.
+        Geometry.
     """
     geo = geo if in_place else geo.model_copy()
     geo.coordinates = np.add(geo.coordinates, arr)
+    return geo
+
+
+def rotate(geo: Geometry, rot: Rotation, *, in_place: bool = False) -> Geometry:
+    """Rotate geometry.
+
+    Parameters
+    ----------
+    geo
+        Geometry.
+    rot
+        Rotation object.
+
+    Returns
+    -------
+        Geometry.
+    """
+    geo = geo if in_place else geo.model_copy()
+    geo.coordinates = rot.apply(geo.coordinates)
     return geo
 
 
