@@ -52,4 +52,5 @@ type = "layers"
 layers = [
     "learn_vrc_tst.view",
     "learn_vrc_tst.geom",
+    "learn_vrc_tst.coord",
 ]
