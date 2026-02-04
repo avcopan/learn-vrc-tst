@@ -1,12 +1,14 @@
 """Cartesian coordinate functions."""
 
+from typing import Literal
+
 import numpy as np
-from numpy.typing import ArrayLike, NDArray
+from numpy.typing import ArrayLike
 
 
 def closest_unit_perpendicular(
     coords: ArrayLike, *, away: bool = False
-) -> NDArray[np.float64]:
+) -> np.ndarray[tuple[Literal[3]], np.dtype[np.float64]]:
     """Get the closest unit perpendicular vector to a set of coordinates.
 
     Parameters
