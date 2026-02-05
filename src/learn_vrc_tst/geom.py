@@ -1,10 +1,31 @@
 """Geometry functions."""
 
+import itertools
+
 import numpy as np
 import py3Dmol
 from automol import Geometry
 from numpy.typing import ArrayLike
 from scipy.spatial.transform import Rotation
+
+
+def concat(geos: list[Geometry]) -> Geometry:
+    """Concatenate geometries.
+
+    Parameters
+    ----------
+    geos
+        List of geometries.
+
+    Returns
+    -------
+        Geometry.
+    """
+    symbols = list(itertools.chain.from_iterable(geo.symbols for geo in geos))
+    coordinates = np.vstack([geo.coordinates for geo in geos])
+    charge = sum(geo.charge for geo in geos)
+    spin = sum(geo.spin for geo in geos)
+    return Geometry(symbols=symbols, coordinates=coordinates, charge=charge, spin=spin)
 
 
 def translate(geo: Geometry, arr: ArrayLike, *, in_place: bool = False) -> Geometry:
