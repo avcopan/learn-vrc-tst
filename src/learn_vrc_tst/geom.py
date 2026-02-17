@@ -5,6 +5,7 @@ import itertools
 import numpy as np
 import py3Dmol
 from automol import Geometry
+from automol.geom import center_of_mass  # noqa: F401
 from numpy.typing import ArrayLike
 from scipy.spatial.transform import Rotation
 
