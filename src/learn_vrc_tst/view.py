@@ -11,7 +11,7 @@ from . import geom
 class View(py3Dmol.view):
     """Class for creating and displaying 3D molecular views."""
 
-    def add_geometry(self, geo: Geometry) -> None:
+    def add_geometry(self, geo: Geometry, *, label: bool = False) -> None:
         """Add geometry to view.
 
         Parameters
@@ -19,7 +19,7 @@ class View(py3Dmol.view):
         geo
             Geometry.
         """
-        geom.view(geo, view=self)
+        geom.view(geo, view=self, label=label)
 
     def add_arrow(
         self,
