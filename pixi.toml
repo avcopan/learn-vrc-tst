@@ -37,6 +37,9 @@ keepachangelog = "*"
 default = { solve-group = "default" }
 dev = { features = ["dev"], solve-group = "default"}
 
+[pypi-dependencies]
+xyzrender = ">=0.1.4, <0.2"
+
 [feature.dev.tasks]
 # Manage pyproject.toml with uv
 uv = "uv"
