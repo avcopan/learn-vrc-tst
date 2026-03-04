@@ -7,9 +7,11 @@ from pathlib import Path
 import numpy as np
 import pint
 import py3Dmol
+import pyparsing as pp
 from automol import Geometry
 from automol.geom import center_of_mass
 from numpy.typing import ArrayLike
+from pyparsing import pyparsing_common as ppc
 from scipy.spatial.transform import Rotation
 
 RADIANS_TO_DEGREES = pint.Quantity("radian").m_as("degree")
@@ -210,6 +212,50 @@ def xyz_string(geo: Geometry) -> str:
         f"{s} {x:10.6f} {y:10.6f} {z:10.6f}"
         for s, (x, y, z) in zip(geo.symbols, geo.coordinates, strict=True)
     )
+
+
+CHAR = pp.Char(pp.alphas)
+SYMBOL = pp.Combine(CHAR + pp.Opt(CHAR))
+XYZ_LINE = SYMBOL + pp.Group(ppc.fnumber * 3) + pp.Suppress(... + pp.LineEnd())
+
+
+def from_xyz_string(geo_str: str) -> Geometry:
+    """Parse an XYZ string into a geometry.
+
+    Parameters
+    ----------
+    xyz_str
+        XYZ string.
+
+    Returns
+    -------
+        Geometry.
+    """
+    geo_str = geo_str.strip()
+    lines = geo_str.splitlines()[2:]
+    if not lines:
+        return Geometry(symbols=[], coordinates=[])  # ty:ignore[invalid-argument-type]
+
+    symbs, coords = zip(
+        *[XYZ_LINE.parse_string(line).as_list() for line in lines], strict=True
+    )
+    return Geometry(symbols=symbs, coordinates=np.array(coords))
+
+
+def read_xyz_file(path: str | Path) -> Geometry:
+    """Read a geometry from an XYZ file.
+
+    Parameters
+    ----------
+    path
+        Path to XYZ file.
+
+    Returns
+    -------
+        Geometry.
+    """
+    path = path if isinstance(path, Path) else Path(path)
+    return from_xyz_string(path.read_text())
 
 
 def write_xyz_file(geo: Geometry, path: str | Path) -> None:
