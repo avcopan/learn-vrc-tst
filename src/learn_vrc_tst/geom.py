@@ -54,6 +54,9 @@ def rotational_analysis(geo: Geometry) -> tuple[np.ndarray, np.ndarray]:
     """
     inert = inertia_tensor(geo)
     evals, evecs = np.linalg.eigh(inert)
+    # Ensure right-handed coordinate system
+    if np.linalg.det(evecs) < 0:
+        evecs[:, -1] *= -1  # flip one eigenvector
     return evals, evecs
 
 

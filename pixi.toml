@@ -39,6 +39,7 @@ dev = { features = ["dev"], solve-group = "default"}
 
 [pypi-dependencies]
 xyzrender = ">=0.1.4, <0.2"
+vmol = { version = ">=3.0rc5, <4", extras = ["all"] }
 
 [feature.dev.tasks]
 # Manage pyproject.toml with uv

@@ -155,6 +155,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/44/0d/f494a2ec62ab56ffd44da4f236db374421fe0cd1e39d9ebc9785751eb432/periodictable-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/45/c7b5c3168458db837e8ceab06dc77824e18202679d0463f0e8f002143a97/tinycss2-1.5.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/74/ba/5bcae54f37c934142b47609f31ce6f4191e274705b5fe89b05a5b52aea9f/vmol-3.0rc5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9c/ab/5867ddf13cc6c31286324cfdc4e5899ef6bba6b1eda6e551a1c9c936e7a4/xyzgraph-1.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/f9/9d5510df34d32d88874369502756afe223356464c5c778debd5f86a448da/xyzrender-0.1.4-py3-none-any.whl
@@ -293,6 +294,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/44/0d/f494a2ec62ab56ffd44da4f236db374421fe0cd1e39d9ebc9785751eb432/periodictable-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/45/c7b5c3168458db837e8ceab06dc77824e18202679d0463f0e8f002143a97/tinycss2-1.5.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/42/a8/4431a08360d45728cdeeb0450142536ba59ea395b1b0f803e94f2dcfe99b/vmol-3.0rc5.tar.gz
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9c/ab/5867ddf13cc6c31286324cfdc4e5899ef6bba6b1eda6e551a1c9c936e7a4/xyzgraph-1.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/f9/9d5510df34d32d88874369502756afe223356464c5c778debd5f86a448da/xyzrender-0.1.4-py3-none-any.whl
@@ -431,6 +433,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/44/0d/f494a2ec62ab56ffd44da4f236db374421fe0cd1e39d9ebc9785751eb432/periodictable-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/45/c7b5c3168458db837e8ceab06dc77824e18202679d0463f0e8f002143a97/tinycss2-1.5.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/42/a8/4431a08360d45728cdeeb0450142536ba59ea395b1b0f803e94f2dcfe99b/vmol-3.0rc5.tar.gz
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9c/ab/5867ddf13cc6c31286324cfdc4e5899ef6bba6b1eda6e551a1c9c936e7a4/xyzgraph-1.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/f9/9d5510df34d32d88874369502756afe223356464c5c778debd5f86a448da/xyzrender-0.1.4-py3-none-any.whl
@@ -634,6 +637,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/44/0d/f494a2ec62ab56ffd44da4f236db374421fe0cd1e39d9ebc9785751eb432/periodictable-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/45/c7b5c3168458db837e8ceab06dc77824e18202679d0463f0e8f002143a97/tinycss2-1.5.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/74/ba/5bcae54f37c934142b47609f31ce6f4191e274705b5fe89b05a5b52aea9f/vmol-3.0rc5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9c/ab/5867ddf13cc6c31286324cfdc4e5899ef6bba6b1eda6e551a1c9c936e7a4/xyzgraph-1.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/f9/9d5510df34d32d88874369502756afe223356464c5c778debd5f86a448da/xyzrender-0.1.4-py3-none-any.whl
@@ -817,6 +821,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/44/0d/f494a2ec62ab56ffd44da4f236db374421fe0cd1e39d9ebc9785751eb432/periodictable-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/45/c7b5c3168458db837e8ceab06dc77824e18202679d0463f0e8f002143a97/tinycss2-1.5.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/42/a8/4431a08360d45728cdeeb0450142536ba59ea395b1b0f803e94f2dcfe99b/vmol-3.0rc5.tar.gz
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9c/ab/5867ddf13cc6c31286324cfdc4e5899ef6bba6b1eda6e551a1c9c936e7a4/xyzgraph-1.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/f9/9d5510df34d32d88874369502756afe223356464c5c778debd5f86a448da/xyzrender-0.1.4-py3-none-any.whl
@@ -1000,6 +1005,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/44/0d/f494a2ec62ab56ffd44da4f236db374421fe0cd1e39d9ebc9785751eb432/periodictable-2.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/0c/c3/44f3fbbfa403ea2a7c779186dc20772604442dde72947e7d01069cbe98e3/pycparser-3.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/60/45/c7b5c3168458db837e8ceab06dc77824e18202679d0463f0e8f002143a97/tinycss2-1.5.1-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/42/a8/4431a08360d45728cdeeb0450142536ba59ea395b1b0f803e94f2dcfe99b/vmol-3.0rc5.tar.gz
       - pypi: https://files.pythonhosted.org/packages/f4/24/2a3e3df732393fed8b3ebf2ec078f05546de641fe1b667ee316ec1dcf3b7/webencodings-0.5.1-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/9c/ab/5867ddf13cc6c31286324cfdc4e5899ef6bba6b1eda6e551a1c9c936e7a4/xyzgraph-1.6.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/55/f9/9d5510df34d32d88874369502756afe223356464c5c778debd5f86a448da/xyzrender-0.1.4-py3-none-any.whl
@@ -5841,6 +5847,28 @@ packages:
   purls: []
   size: 15777800
   timestamp: 1769721396484
+- pypi: https://files.pythonhosted.org/packages/42/a8/4431a08360d45728cdeeb0450142536ba59ea395b1b0f803e94f2dcfe99b/vmol-3.0rc5.tar.gz
+  name: vmol
+  version: 3.0rc5
+  sha256: c99d152543fc187611c9f739994a08b558494e97cde88a6705c428fd7179df04
+  requires_dist:
+  - numpy>=1.24
+  - cclib ; extra == 'cclib'
+  - vmol[cclib] ; extra == 'all'
+  - ruff ; extra == 'lint'
+  - vmol[all,lint] ; extra == 'dev'
+  requires_python: '>=3.10'
+- pypi: https://files.pythonhosted.org/packages/74/ba/5bcae54f37c934142b47609f31ce6f4191e274705b5fe89b05a5b52aea9f/vmol-3.0rc5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+  name: vmol
+  version: 3.0rc5
+  sha256: 576386f283e00f5a66793a996c928aa5f5a52dd6d04768e0770387c917144331
+  requires_dist:
+  - numpy>=1.24
+  - cclib ; extra == 'cclib'
+  - vmol[cclib] ; extra == 'all'
+  - ruff ; extra == 'lint'
+  - vmol[all,lint] ; extra == 'dev'
+  requires_python: '>=3.10'
 - conda: https://conda.anaconda.org/conda-forge/noarch/wcwidth-0.5.3-pyhd8ed1ab_0.conda
   sha256: 2395599ec9e37e6f21838bb26e7f2336fa03a4b1460ba10897ec856b21ac7d59
   md5: 36432484e9ce3b073a51bf138767a593
