@@ -6,6 +6,8 @@ preview = ["pixi-build"]
 [dependencies]
 learn-vrc-tst = { path = "." }
 automol = ">=0.0.5,<0.0.6"
+altair-all = ">=6.0.0,<7"
+polars = ">=1.39.3,<2"
 
 [package]
 name = "learn-vrc-tst"
