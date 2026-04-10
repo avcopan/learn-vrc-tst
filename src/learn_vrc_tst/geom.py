@@ -95,7 +95,13 @@ def concat(geos: list[Geometry]) -> Geometry:
     return Geometry(symbols=symbols, coordinates=coordinates, charge=charge, spin=spin)
 
 
-def translate(geo: Geometry, arr: ArrayLike, *, in_place: bool = False) -> Geometry:
+def translate(
+    geo: Geometry,
+    arr: ArrayLike,
+    *,
+    keys: Collection[int] | None = None,
+    in_place: bool = False,
+) -> Geometry:
     """Translate geometry.
 
     Parameters
@@ -109,8 +115,37 @@ def translate(geo: Geometry, arr: ArrayLike, *, in_place: bool = False) -> Geome
     -------
         Geometry.
     """
-    geo = geo if in_place else geo.model_copy()
-    geo.coordinates = np.add(geo.coordinates, arr)
+    geo = geo if in_place else geo.model_copy(deep=True)
+    mask = slice(None) if keys is None else list(keys)
+    geo.coordinates[mask] = np.add(geo.coordinates[mask], arr)
+    return geo
+
+
+def reflect(
+    geo: Geometry,
+    normal: ArrayLike,
+    *,
+    keys: Collection[int] | None = None,
+    in_place: bool = False,
+) -> Geometry:
+    """Reflect geometry across a plane.
+
+    Parameters
+    ----------
+    geo
+        Geometry.
+    normal
+        Normal vector of the reflection plane.
+
+    Returns
+    -------
+        Geometry.
+    """
+    geo = geo if in_place else geo.model_copy(deep=True)
+    normal = np.asarray(normal, dtype=float)
+    proj = np.outer(normal, normal) / np.dot(normal, normal)
+    mask = slice(None) if keys is None else list(keys)
+    geo.coordinates[mask] = geo.coordinates[mask] - 2 * geo.coordinates[mask] @ proj
     return geo
 
 
@@ -138,7 +173,7 @@ def rotate(
     -------
         Geometry.
     """
-    geo = geo if in_place else geo.model_copy()
+    geo = geo if in_place else geo.model_copy(deep=True)
     mask = slice(None) if keys is None else list(keys)
     geo.coordinates[mask] = rot.apply(geo.coordinates[mask])
     return geo
