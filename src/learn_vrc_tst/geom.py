@@ -3,6 +3,7 @@
 import itertools
 from collections.abc import Collection, Sequence
 from pathlib import Path
+from typing import cast
 
 import numpy as np
 import pint
@@ -74,6 +75,50 @@ def rotation_to_inertial_frame(geo: Geometry) -> Rotation:
     """
     _, evecs = rotational_analysis(geo)
     return Rotation.from_matrix(evecs.T)
+
+
+def remove_atoms(geo: Geometry, idxs: Collection[int]) -> Geometry:
+    """Remove atoms from the geometry.
+
+    Parameters
+    ----------
+    geo
+        Geometry.
+    idxs
+        Indices of the atoms to remove.
+
+    Returns
+    -------
+        Geometry with the specified atoms removed.
+    """
+    return fragment(geo, [i for i in range(len(geo.symbols)) if i not in idxs])
+
+
+def fragment(geo: Geometry, idxs: Collection[int]) -> Geometry:
+    """Extract a fragment of the geometry.
+
+    Parameters
+    ----------
+    geo
+        Geometry.
+    idxs
+        Indices of the atoms to include in the fragment.
+
+    Returns
+    -------
+        Fragment of the geometry.
+    """
+    if not isinstance(idxs, Sequence):
+        idxs = sorted(idxs)
+
+    idxs = cast("Sequence[int]", idxs)
+    idxs = list(idxs)
+    return Geometry(
+        symbols=[geo.symbols[i] for i in idxs],
+        coordinates=geo.coordinates[list(idxs)],
+        charge=geo.charge,
+        spin=geo.spin,
+    )
 
 
 def concat(geos: list[Geometry]) -> Geometry:
