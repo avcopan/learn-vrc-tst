@@ -277,7 +277,7 @@ def from_xyz_string(geo_str: str) -> Geometry:
     symbs, coords = zip(
         *[XYZ_LINE.parse_string(line).as_list() for line in lines], strict=True
     )
-    return Geometry(symbols=symbs, coordinates=np.array(coords))
+    return Geometry(symbols=list(symbs), coordinates=np.array(coords))
 
 
 def read_xyz_file(path: str | Path) -> Geometry:
